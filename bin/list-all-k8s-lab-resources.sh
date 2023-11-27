@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Define an array of paths to be removed
+paths_to_remove=(
+    "/home/ubuntu/nginx-api-gateway-for-k8s/task_02/jobs.local.crt"  # file
+    "/home/ubuntu/nginx-api-gateway-for-k8s/task_02/jobs.local.key"  # file
+    "/var/tmp/jwk"  # directory
+)
+
 # Define an array of resource types
 resource_types=("daemonset" "deployment" "pod" "svc" "virtualserver" "policy" "appolicy" "secret")
 
@@ -20,6 +27,25 @@ show_help() {
     echo "or 'dirty' in red if any resources are found."
 }
 
+# Function to remove files and directories
+remove_files_and_directories() {
+    for path in "${paths_to_remove[@]}"; do
+        if [ -e "$path" ]; then
+            if [ -d "$path" ]; then
+                # If it's a directory, remove it recursively
+                echo "Removing directory: $path"
+                rm -ri "$path"
+            else
+                # If it's a file, remove it
+                echo "Removing file: $path"
+                rm -i "$path"
+            fi
+        else
+            echo "Path not found: $path"
+        fi
+    done
+}
+
 # Check for flags
 if [ "$1" == "--start-over" ]; then
     echo "Starting over: Deleting all resources..."
@@ -28,6 +54,8 @@ if [ "$1" == "--start-over" ]; then
         microk8s kubectl delete "$resource" --all --namespace default --grace-period=0 --force
     done
     echo "All resources deleted."
+    echo "Removing specified files and directories..."
+    remove_files_and_directories
     exit 0
 elif [ "$1" == "--help" ]; then
     show_help
@@ -68,3 +96,4 @@ if [ "$any_non_ignored_resource_found" = false ]; then
 else
     echo -e "\033[31mdirty\033[0m"  # Red text
 fi
+
