@@ -1,0 +1,27 @@
+apiVersion: k8s.nginx.org/v1
+kind: VirtualServer
+metadata:
+  name: my-virtualserver
+  namespace: default
+spec:
+  host: jobs.local
+  tls:
+    secret: jobs-local-tls # replace with your actual secret name
+    redirect:
+      enable: true       # Enable automatic HTTP to HTTPS redirection
+      code: 301          # Redirect with HTTP status code 301 (Moved Permanently)
+      basedOn: scheme    # Redirect based on the scheme of the request
+  upstreams:
+    - name: eclectic-jobs-upstream
+      service: eclectic-jobs
+      port: 3000
+  routes:
+    - path: /get-job
+      action:
+        proxy:
+          upstream: eclectic-jobs-upstream
+          rewritePath: /
+    - path: /add-job
+      action:
+        pass: eclectic-jobs-upstream
+

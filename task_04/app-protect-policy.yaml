@@ -1,0 +1,9 @@
+apiVersion: k8s.nginx.org/v1
+kind: Policy
+metadata:
+  name: app-protect-policy
+spec:
+  waf:
+    enable: true
+    apPolicy: "default/jobs-openapi-spec"
+

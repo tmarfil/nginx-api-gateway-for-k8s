@@ -1,0 +1,69 @@
+openapi: 3.0.0
+info:
+  title: Eclectic Jobs API
+  version: 1.0.0
+  description: An API for managing and retrieving eclectic job titles.
+servers:
+  - url: https://jobs.local
+    description: Development server
+
+paths:
+  /get-job:
+    get:
+      summary: Get a Random Job
+      description: Retrieves a random job from the eclectic jobs list.
+      responses:
+        '200':
+          description: A random job title
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  job:
+                    type: string
+                    example: Mortician
+        '500':
+          description: Internal Server Error
+
+  /add-job:
+    post:
+      summary: Add New Job(s)
+      description: Adds new job(s) to the eclectic jobs list. Expects an array of job titles.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+                example: Software Developer
+      responses:
+        '200':
+          description: Updated list of eclectic jobs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                example:
+                  - Mortician
+                  - Civil Rights Activist
+                  - House Sitter
+                  - Claims Adjuster
+                  - Assistant Handball Coach
+                  - Software Developer
+        '400':
+          description: Invalid input, array expected
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid input, array expected
+        '500':
+          description: Internal Server Error

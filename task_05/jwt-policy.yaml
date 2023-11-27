@@ -1,0 +1,8 @@
+apiVersion: k8s.nginx.org/v1
+kind: Policy
+metadata:
+  name: jwt-policy
+spec:
+  jwt:
+    secret: jwk-secret
+    realm: "My API"

@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: myapp
+  name: myapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - image: tonymarfil/myapp:v5
+        imagePullPolicy: Always
+        name: myapp
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: myapp
+  name: myapp
+spec:
+  ports:
+  - name: 3000-3000
+    nodePort: 30010
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: myapp
+  type: NodePort
+status:
+  loadBalancer: {}
