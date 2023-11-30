@@ -1,0 +1,2 @@
+Where to see policy violations in the logs?
+How to configure app policy logs?

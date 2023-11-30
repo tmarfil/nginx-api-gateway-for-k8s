@@ -1,6 +1,5 @@
 const eclecticJobs = [
     "Mortician",
-    "Civil Rights Activist",
     "House Sitter",
     "Claims Adjuster",
     "Assistant Handball Coach",
@@ -98,7 +97,6 @@ const eclecticJobs = [
     "Chief Euphoria Officer",
     "Director of Daydreams",
     "Head of Fuzzy Things",
-    "Professional Cuddler",
     "Lord of the Fries",
     "Chief Problem Solver",
     "Director of Happiness"
