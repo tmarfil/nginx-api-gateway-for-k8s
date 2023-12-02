@@ -49,6 +49,7 @@ Skip the **Warning: Potential Security Risk Ahead** self-signed certificated war
   :scale: 50%
 
 The API endpoint ``https://jobs.local/get-job`` is ready to receive API GET requests.
+
 The API endpoint ``https://jobs.local/add-job`` is ready to receive API POST requests.
 
 .. image:: images/05_tls_jobs_local_get_job.jpg
