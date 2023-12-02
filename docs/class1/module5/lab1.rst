@@ -37,7 +37,7 @@ In the URL bar of the web browser, connect to ``/get-job`` API endpoint: ``https
 Click [Send]
 
 The **Response** on the right-hand side will be a JSON formatted list of strings representing a list of jobs.
-Go ahead and add a append to the list with more fun jobs. You can send multiple jobs at once: ["job1", "job2", "job3"].
+Append to the list. You can send multiple jobs at once: ["job1", "job2", "job3"].
 
 .. image:: images/01_openapi_spec.jpg
   :scale: 50%
