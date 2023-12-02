@@ -46,5 +46,5 @@ The "myapp" web application is attempting to fetch a random job title from the (
 .. image:: images/02_error_fetching_browser.jpg
   :scale: 50%
 
-To fix the broken HTTP route, we need to add TLS (Changing the HTTP scheme from HTTP to HTTPS) and route ``/get-job`` to the "ecelctic-jobs" API.
+To fix the broken HTTP route, we need to add TLS (changing the HTTP scheme from HTTP to HTTPS) and route ``/get-job`` to the "ecelctic-jobs" API.
 
