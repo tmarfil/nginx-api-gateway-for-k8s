@@ -44,7 +44,7 @@ Change into the working directory.
    
 Familiarize yourself with the lab environment before you get started.
 
-The lab environment consists of a single-node K8s cluster (`microk8s <https://microk8s.io/>`_) running (`NGINX Plus with App Protect <https://www.nginx.com/products/nginx-app-protect/`_ as ingress in a daemonset.
+The lab environment consists of a single-node K8s cluster (`microk8s <https://microk8s.io/>`_) running (`NGINX Plus with App Protect <https://www.nginx.com/products/nginx-app-protect/>`_ as ingress in a daemonset.
 
 ``kubectl`` and ``k`` are aliased to ``microk8s kubectl``. These commands can be used interchangeably.    
 
