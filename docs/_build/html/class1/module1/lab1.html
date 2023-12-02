@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<head>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PPZPQ6');</script>
+  <!-- End Google Tag Manager -->
+    <title>Task 00: Kubernetes Lab Environment</title>
+  
+
+  <meta charset="utf-8">
+  <!-- Twitter Bootstrap viewport setting -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- F5 metadata -->
+  <meta name="title" content="Task 00: Kubernetes Lab Environment"/>
+  <meta name="product" content="F5 Agility Template"/>
+  <meta name="version" content="latest"/>
+  <meta name="updated_date"  content="2023-12-02 19:18:42"/>
+  <meta name="archived" content="Archived documents excluded"/>
+  <meta name="doc_type" content="Manual"/>
+  <meta name="lifecycle" content="release"/>
+  <meta name="F5 Agility Template" content="latest"/>
+
+
+  <!-- Version selector meta tags-->
+  <meta name="version_meta_path" content="/training/community/template/versions.json">
+  <meta name="project_safe" content="F5AgilityTemplate">
+  
+
+  
+  <link href="https://cdn.f5.com/favicon.ico" rel="icon">
+
+</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 00: Kubernetes Lab Environment &#8212; F5 Agility Template </title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/f5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/f5-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/CoveoFullSearch.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/21fb8a09c3.css" type="text/css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Task 01: Create API Service in Kubernetes" href="../module2/module2.html" />
+    <link rel="prev" title="Task 00: Kubernetes Lab Environment" href="module1.html" /> 
+  </head><body>
+  <div id="clouddocs-header"></div>
+
+    <div id="sidebar" class="section-nav">
+      
+      <!--  version selector ------------------>
+      <div id="version_selector_wrapper">
+      </div>
+      <nav class="nav-sidebartoc">
+
+        
+        <h5>F5 Agility Template latest </h5>
+        
+
+        <hr>
+        <span class="nav-sidebartoc">
+            <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../class1.html">F5 NGINX Plus Ingress Controller as an API Gateway for Kubernetes</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="module1.html">Task 00: Kubernetes Lab Environment</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Task 00: Kubernetes Lab Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/module2.html">Task 01: Create API Service in Kubernetes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/module3.html">Task 02: Create https://jobs.local/get-job API endpoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/module4.html">Task 03: Complete the https://jobs.local application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/module5.html">Task 04: OpenAPI Spec Enforcement with NGINX App Protect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/module6.html">Task 05: Authorization - Signed JSON Web Token (JWT) Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/module7.html">Task 06: API Request Rate-Limiting</a></li>
+</ul>
+</li>
+</ul>
+
+        </span><!-- Use this file to add extra links to the bottom of the ToC sidebar -->
+<hr>
+  <span class="nav-sidebartoc">
+ <!-- insert content here -->
+  </span>
+      </nav>
+    </div>
+
+
+    <div id="right-sidebar">
+      <h7 style="font-weight:normal">On this page:</h7>
+      <nav class="nav-sidebartoc">
+        <span class="nav-sidebartoc">
+            <ul>
+<li><a class="reference internal" href="#">Task 00: Kubernetes Lab Environment</a></li>
+</ul>
+
+         </span>
+      </nav>
+    </div>
+
+
+
+
+
+  
+  <div class="main active" id="content" >
+    <article class="docs-container site-article-inner">
+              <!-- custom breadcrumb -->
+        <h5>
+            <a href="../../index.html">F5 Agility Template</a>
+              &gt; <a href="../class1.html">F5 NGINX Plus Ingress Controller as an API Gateway for Kubernetes</a>
+              &gt; <a href="module1.html">Task 00: Kubernetes Lab Environment</a>
+
+          <span class="right">
+             <a href="../../_sources/class1/module1/lab1.rst.txt" rel="nofollow">Source</a> |
+             <a href="https://github.com/f5devcentral/f5-agility-labs-template">Edit on <i class="fa fa-github" aria-hidden="true"></i></a>
+          </span>
+        </h5>
+        <!-- end custom breadcrumb -->
+      
+
+
+    <!--a title="Export PDF" id="export-pdf" class="btn btn btn-link pull-right">View PDF</a-->
+    <button type="button" id="export-pdf" class="btn btn-link right">PDF</button>
+
+
+    
+     
+         <div class="sidebar" id="version-warning" style="display: none;">
+           <p class="first sidebar-title">
+           <span class="icon fa fa-info-circle fa-lg"></span> Version notice:</p>
+           <p class="last" id="currentVersion"></p>
+          </div>
+
+
+     <div role="main">
+        
+  <div class="section" id="task-00-kubernetes-lab-environment">
+<h1>Task 00: Kubernetes Lab Environment<a class="headerlink" href="#task-00-kubernetes-lab-environment" title="Permalink to this heading">¶</a></h1>
+<p>Connect to the lab environment via RDP. Linux Jump Host =&gt; Access =&gt; XRDP</p>
+<a class="reference internal image-reference" href="../../_images/01_udf_xrdp.jpg"><img alt="../../_images/01_udf_xrdp.jpg" src="../../_images/01_udf_xrdp.jpg" style="width: 864.0px; height: 540.0px;" /></a>
+<p>username: <code class="docutils literal notranslate"><span class="pre">ubuntu</span></code>
+password: <code class="docutils literal notranslate"><span class="pre">ubuntu</span></code></p>
+<p>If you’re prompted for a password a second time: <code class="docutils literal notranslate"><span class="pre">ubuntu</span></code></p>
+<p>Open a terminal. Position and resize the terminal to the left side of the screen. ssh to microk8s1.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>ubuntu@microk8s1
+ubuntu
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/03_microk8s_login.jpg"><img alt="../../_images/03_microk8s_login.jpg" src="../../_images/03_microk8s_login.jpg" style="width: 864.0px; height: 540.0px;" /></a>
+<p>Open the firefox web browser. Position and resize the web browser to the right side of the screen.
+With your screen split between left (terminal) and right (web browser) windows, you can toggle maximize either window to take up the whole screen if you need the extra room to complete a lab task.</p>
+<a class="reference internal image-reference" href="../../_images/04_split_screen.jpg"><img alt="../../_images/04_split_screen.jpg" src="../../_images/04_split_screen.jpg" style="width: 864.0px; height: 540.0px;" /></a>
+<p>Clone the <em>nginx-api-gateway-for-k8s repository</em>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/tmarfil/nginx-api-gateway-for-k8s.git
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/05_git_clone.jpg"><img alt="../../_images/05_git_clone.jpg" src="../../_images/05_git_clone.jpg" style="width: 864.0px; height: 540.0px;" /></a>
+<p>Change into the working directory.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>nginx-api-gateway-for-k8s
+</pre></div>
+</div>
+<p>Familiarize yourself with the lab environment before you get started.</p>
+<p>The lab environment consists of a single-node K8s cluster (<a class="reference external" href="https://microk8s.io/">microk8s</a>) running (<a href="#id1"><span class="problematic" id="id2">`NGINX Plus with App Protect &lt;https://www.nginx.com/products/nginx-app-protect/`_</span></a> as ingress in a daemonset.</p>
+<p><code class="docutils literal notranslate"><span class="pre">kubectl</span></code> and <code class="docutils literal notranslate"><span class="pre">k</span></code> are aliased to <code class="docutils literal notranslate"><span class="pre">microk8s</span> <span class="pre">kubectl</span></code>. These commands can be used interchangeably.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span>
+</pre></div>
+</div>
+<p>The three commands below would display the same results.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>k<span class="w"> </span>get<span class="w"> </span>daemonset<span class="w"> </span>nginx-ingress<span class="w"> </span>-n<span class="w"> </span>nginx-ingress
+kubectl<span class="w"> </span>get<span class="w"> </span>daemonset<span class="w"> </span>nginx-ingress<span class="w"> </span>-n<span class="w"> </span>nginx-ingress
+microk8s<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>daemonset<span class="w"> </span>nginx-ingress<span class="w"> </span>-n<span class="w"> </span>nginx-ingress
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/05b_get_daemonset_nginx_ingress.jpg"><img alt="../../_images/05b_get_daemonset_nginx_ingress.jpg" src="../../_images/05b_get_daemonset_nginx_ingress.jpg" style="width: 864.0px; height: 540.0px;" /></a>
+<p>NGINX Plus is running as a daemonset and will listen on port 80 and 443 by default.</p>
+<p>From the web browser try:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">http://10.1.1.4:80</span></code>    # returns “404 Not Found” when not configured</p>
+<p><code class="docutils literal notranslate"><span class="pre">http://10.1.1.4:443</span></code>   # returns “400 Bad Request” when not configured</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../_images/06_nginx_404_not_found.jpg"><img alt="../../_images/06_nginx_404_not_found.jpg" src="../../_images/06_nginx_404_not_found.jpg" style="width: 864.0px; height: 540.0px;" /></a>
+<p>Copy the lab commands into your <code class="docutils literal notranslate"><span class="pre">~/.local/bin</span></code> directory.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>./bin/*<span class="w"> </span>~/.local/bin/
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/07_cp_bin.jpg"><img alt="../../_images/07_cp_bin.jpg" src="../../_images/07_cp_bin.jpg" style="width: 864.0px; height: 540.0px;" /></a>
+<p>Any shell script commands copied to <code class="docutils literal notranslate"><span class="pre">~/.local/bin</span></code> wil be made executable and available to invoke from anywhere automatically. Use [Tab] completion to save time.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-alt<span class="w"> </span>~/.local/bin
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/08_ls_bin.jpg"><img alt="../../_images/08_ls_bin.jpg" src="../../_images/08_ls_bin.jpg" style="width: 864.0px; height: 540.0px;" /></a>
+<p>If running in your own environment, make the shell script commands executable.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>~/.local/bin/*
+</pre></div>
+</div>
+<p>Confirm the K8s cluster is healthy. Look for green ‘clean’.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>microk8s-status.sh
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/09_microk8s-status.jpg"><img alt="../../_images/09_microk8s-status.jpg" src="../../_images/09_microk8s-status.jpg" style="width: 864.0px; height: 540.0px;" /></a>
+<p>Confirm name resolution works from inside a test container.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>test-dns.sh
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/10_test-dns.jpg"><img alt="../../_images/10_test-dns.jpg" src="../../_images/10_test-dns.jpg" style="width: 864.0px; height: 540.0px;" /></a>
+<p>The NGINX Plus images are available in the container registry running on <code class="docutils literal notranslate"><span class="pre">http://localhost:32000/v2/_catalog</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>http://localhost:32000/v2_catalog<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/11_microk8s_local_container_repo.jpg"><img alt="../../_images/11_microk8s_local_container_repo.jpg" src="../../_images/11_microk8s_local_container_repo.jpg" style="width: 864.0px; height: 540.0px;" /></a>
+<p>You can see all the K8s resources created in the lab at any time.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>list-all-k8s-lab-resources.sh
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/12_list-all-k8s-lab-resources.jpg"><img alt="../../_images/12_list-all-k8s-lab-resources.jpg" src="../../_images/12_list-all-k8s-lab-resources.jpg" style="width: 864.0px; height: 540.0px;" /></a>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p>You can restore the lab to back to a clean state at any time with the <code class="docutils literal notranslate"><span class="pre">start-over</span></code> flag.</p>
+<div class="last highlight-bash notranslate"><div class="highlight"><pre><span></span>list-all-k8s-lab-resources.sh<span class="w"> </span>--start-over
+</pre></div>
+</div>
+</div>
+</div>
+
+
+     </div>
+    
+     <div class="row next-prev-btn-row">
+       <div class="col-lg-12">
+       
+        <a href="module1.html" title="Task 00: Kubernetes Lab Environment" accesskey="p" class="btn btn-primary left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+       
+       
+          <a href="../module2/module2.html" title="Task 01: Create API Service in Kubernetes" accesskey="n" class="btn btn-primary right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+       
+     </div>
+     </div>
+    
+
+    </article>
+  </div>
+
+</div>
+
+
+  <div id="clouddocs-footer"></div>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <script src="../../_static/js/index.js"></script>
+  <script src="../../_static/js/jquery.appear.js"></script>
+  <script src="../../_static/js/printThis.js"></script>
+  <script src="../../_static/js/bootstrap.min.js"></script>
+  <script src="../../_static/js/clouddocs.js"></script>
+  <script src="../../_static/js/CoveoJsSearch.Lazy.min.js"></script>
+  </body>
+</html>
