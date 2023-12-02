@@ -136,7 +136,7 @@ You can see all the K8s resources created in the lab at any time.
 
 .. attention::
 
-   You can restore the lab to back to a clean state at any time with the ``start-over`` flag.
+   You can restore the lab back to a clean state at any time with the ``start-over`` flag.
   
    .. code-block:: bash
 
