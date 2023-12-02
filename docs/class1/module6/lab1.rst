@@ -59,7 +59,7 @@ The output of ``create-signed-jwt-sh`` is presented in two formats:
 
 - Authorization Bearer: <base64 encoded string>. This is the value expected in an HTTP "Authorization" header.
 
-- Human redable Base64 decoded Header, Payload, and JWT Signture components.
+- Human-readable Base64 decoded Header, Payload, and JWT Signture components.
 
 The public key used to validate the JWT must be converted to a JSON formatted array of JSON Web Keys (JWK). The create-signed-jwt.sh script has prepared this as well.
 
