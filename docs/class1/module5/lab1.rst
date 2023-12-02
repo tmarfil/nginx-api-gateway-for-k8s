@@ -57,7 +57,7 @@ Change to the task_04 directory.
 
    cd ../task_04
 
-An `OpenAPi Spec <https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ is a standard that defines the schema of a REST API. In an OpenAPI Spec file, we can define the allowable endpoints (/get-job, /add-job), methods (GET /get-job, POST /add-job) and value types (POST /add-job must be an array of strings). NGINX Plus App Protect can convert OpenAPi Spec files into enforceable Web Appliation Firewall (WAF) policies.
+An `OpenAPI Spec <https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ is a standard that defines the schema of a REST API. In an OpenAPI Spec file, we can define the allowable endpoints (/get-job, /add-job), methods (GET /get-job, POST /add-job) and value types (POST /add-job must be an array of strings). NGINX Plus App Protect can convert OpenAPi Spec files into enforceable Web Appliation Firewall (WAF) policies.
 
 Review the OpenAPI spec file for our /get-job and /add-job API endpoints:
 
