@@ -119,7 +119,7 @@ If you now try to POST a payload that does not conform to the spec, it will be r
 
 However, valide POST payloads (array of strings representing job titles) are still allowed.
 
-.. image:: images/09_post_accepted.jpg
+.. image:: images/01_openapi_spec.jpg
   :scale: 50%
 
 
