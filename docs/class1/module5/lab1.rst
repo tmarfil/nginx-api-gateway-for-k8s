@@ -81,7 +81,7 @@ Create an ``appolicy`` Custom Resource Definition (CRD). NGINX Plus App Protect 
 
 .. code-block:: bash
 
-   apply -f jobs-openapi-spec-appolicy.yaml
+   k apply -f jobs-openapi-spec-appolicy.yaml
 
 .. image:: images/05_apply_appolicy.jpg
   :scale: 50%
@@ -97,7 +97,7 @@ Create a ``policy`` Custom Resource Definition (CRD). The ``policy`` CRD referen
 
 .. code-block:: bash
 
-   apply -f app-protect-policy.yaml
+   k apply -f app-protect-policy.yaml
 
 Apply the modifed virtualserver CRD. Note how the ``/add-job`` path now has the ``app-protect-policy`` applied.
 
@@ -110,7 +110,7 @@ Apply the modifed virtualserver CRD. Note how the ``/add-job`` path now has the 
 
 .. code-block:: bash
 
-   apply -f VirtualServer.yaml
+   k apply -f VirtualServer.yaml
 
 If you now try to POST a payload that does not conform to the spec, it will be rejected and the supportID will be displayed in the response.
 
