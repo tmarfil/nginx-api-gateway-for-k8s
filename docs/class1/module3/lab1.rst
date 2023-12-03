@@ -18,7 +18,6 @@ Create a TLS certificate and key for the httpS://jobs.local/get-job api endpoint
 
 Create a K8s secret to store the TLS certificate and key.
 
-
 .. code-block:: bash
 
    kubectl create secret tls jobs-local-tls --key jobs.local.key --cert jobs.local.crt
@@ -42,6 +41,19 @@ All Kubernetes admins are familiar with native resources such as 'pods', 'deploy
    bat VirtualServer.yaml
    k apply -f VirtualServer.yaml
 
+Our environment now looks like this:
+
+.. table::
+   :class: custom-table
+
+   +----------------------------+----------------------------------+
+   | Outside K8s Cluster        | Inside K8s Cluster               |
+   +============================+==================================+
+   | https://jobs.local/get-job | http://eclectic-jobs:3000/       |
+   +----------------------------+----------------------------------+
+   | https://jobs.local/add-job | http://eclectic-jobs:3000/add-job|
+   +----------------------------+----------------------------------+
+
 From the URL bar of the web browser, connect to the new API endpoint: ``https://jobs.local/get-job``
 Skip the **Warning: Potential Security Risk Ahead** self-signed certificated warning by clicking on [Advanced...] => [Accept the Risk and Continue].
 
@@ -49,7 +61,6 @@ Skip the **Warning: Potential Security Risk Ahead** self-signed certificated war
   :scale: 50%
 
 The API endpoint ``https://jobs.local/get-job`` is ready to receive API GET requests.
-
 The API endpoint ``https://jobs.local/add-job`` is ready to receive API POST requests.
 
 .. image:: images/05_tls_jobs_local_get_job.jpg

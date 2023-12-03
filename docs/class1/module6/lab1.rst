@@ -1,7 +1,7 @@
 Task 05: Authorization - Signed JSON Web Token (JWT) Validation
 ===============================================================
 
-The https://jobs.local/post-job API endpoint is not authorizing users and will accept changes from anyone. Let's lock it down to only authorized users.
+The ``https://jobs.local/add-job`` API endpoint is not authorizing users and will accept changes from anyone. In this task, we restrict access to authorized users only.
 
 The most common method to authorize API users is via an "Authorization" HTTP header in the format:
 
@@ -59,7 +59,7 @@ The output of ``create-signed-jwt-sh`` is presented in two formats:
 
 - Authorization Bearer: <base64 encoded string>. This is the value expected in an HTTP "Authorization" header.
 
-- Human-readable Base64 decoded Header, Payload, and JWT Signature.
+- Human redable Base64 decoded Header, Payload, and JWT Signture components.
 
 The public key used to validate the JWT must be converted to a JSON formatted array of JSON Web Keys (JWK). The create-signed-jwt.sh script has prepared this as well.
 
@@ -84,7 +84,7 @@ Create a Policy Custom Resource Definition (CRD) with property ``spec.jwt`` and 
 
 .. code-block:: bash
 
-   kubectl bat jwt-policy.yaml
+   bat jwt-policy.yaml
 
 .. image:: images/05_bat_jwt-policy.jpg
   :scale: 50%
@@ -101,7 +101,7 @@ Apply the modified VirtualServer.yaml.
 
 .. code-block:: bash
 
-   kubectl bat VirtualServer.yaml
+   bat VirtualServer.yaml
    kubectl apply -f VirtualServer.yaml
 
 Copy to the clipboard the value of the "Authorization" header in the output of ``create-signed-jwt.sh``.
@@ -113,9 +113,9 @@ Copy to the clipboard the value of the "Authorization" header in the output of `
 .. image:: images/07b_copy_jwt.jpg
   :scale: 50%
 
-You may have already prepared this step in the previous task. If so, skip these instructions and just create the "Authorization" header as shown in the table and schreenshots below.
+You may have already prepared this step in the previous task. If so, skip these instructions and just create the "Authorization" header as shown in the table and screenshot below.
 
-In the URL bar of the web browser, connect to ``/get-job`` API endpoint: ``https://jobs.local/get-job``
+In the URL bar of the web browser, connect to the ``https://jobs.local/get-job`` API endpoint.
 
 - Press [F12] to reveal the Firefox Developer Tools
 - Select 'Network' and 'Response' just like the screenshot below 
@@ -143,7 +143,7 @@ Copy and paste the value of the "Authorization" header just like the table and s
 | ["Professional Skateboarder"]                  |
 +------------------------------------------------+
 
-With the "Authorization" header on/enabled, you can POST new jobs to the https:/jobs.local/add-job API endpoint.
+With the "Authorization" header on/enabled, you can POST new jobs to the ``https:/jobs.local/add-job`` API endpoint.
 
 .. image:: images/07c_authorization_works.jpg
   :scale: 50%

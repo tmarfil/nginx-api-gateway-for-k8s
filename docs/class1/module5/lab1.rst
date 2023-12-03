@@ -1,16 +1,16 @@
 Task 04: OpenAPI Spec Enforcement with NGINX App Protect
 ========================================================
 
-The jobs-api has two endpoints:
+Out API has two endpoints:
 
-- /get-job is used to GET a random job title
-- /add-job is how we add more jobs to the possiblities. /add-job will accept an HTTP POST with a  list of job titles in JSON format. For example:
+- ``https://jobs.local/get-job`` is used to GET a random job title.
+- ``https://jobs.local/add-job`` is how we add more jobs titles and will accept an HTTP POST with a list of job titles in JSON format. For example:
 
 .. code-block:: yaml
 
    ["Junior Analyst", "Site Reliability Engineer"]
    
-In the URL bar of the web browser, connect to ``/get-job`` API endpoint: ``https://jobs.local/get-job``
+In the URL bar of the web browser, connect to the ``https://jobs.local/get-job`` API endpoint.
 
 - Press [F12] to reveal the Firefox Developer Tools
 - Select 'Network' and 'Response' just like the screenshot below 
@@ -37,14 +37,14 @@ In the URL bar of the web browser, connect to ``/get-job`` API endpoint: ``https
 Click [Send]
 
 The **Response** on the right-hand side will be a JSON formatted list of strings representing a list of jobs.
-Append to the list. You can send multiple jobs at once: ["job1", "job2", "job3"].
+Go ahead and add a append to the list with more fun jobs. You can send multiple jobs at once: ["job1", "job2", "job3"].
 
 .. image:: images/01_openapi_spec.jpg
   :scale: 50%
   
-However, there is a problem with our /add-job API endpoint.
+However, there is a problem with our ``https://jobs.local/add-job`` API endpoint.
 
-Append new values to the list of job titles by POSTing a bad payload to the /add-job api. For example, an array of non-string types: [42, true].
+Append new values to the list of job titles by POSTing a bad payload to ``https://jobs.local/add-job``. For example, an array of non-string types: [42, true].
 
 The API will accept anything! We need to enforce the API schema so only valid requests are allowed.
 

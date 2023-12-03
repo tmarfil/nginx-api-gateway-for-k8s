@@ -21,7 +21,7 @@ Open a terminal. Position and resize the terminal to the left side of the screen
 .. image:: images/03_microk8s_login.jpg
   :scale: 50%
 
-Open the firefox web browser. Position and resize the web browser to the right side of the screen.
+Open the Firefox web browser. Position and resize the web browser to the right side of the screen.
 With your screen split between left (terminal) and right (web browser) windows, you can toggle maximize either window to take up the whole screen if you need the extra room to complete a lab task.
 
 .. image:: images/04_split_screen.jpg
@@ -42,6 +42,30 @@ Change into the working directory.
 
    cd nginx-api-gateway-for-k8s
    
+Copy the lab commands into your ``~/.local/bin`` directory.
+
+.. code-block:: bash
+
+   cp -r ./bin/* ~/.local/bin/
+
+.. image:: images/07_cp_bin.jpg
+  :scale: 50%
+
+Any shell script commands copied to ``~/.local/bin`` wil be made executable and available to invoke from anywhere automatically. Use [Tab] completion to save time.
+
+.. code-block:: bash
+
+   ls -alt ~/.local/bin
+
+.. image:: images/08_ls_bin.jpg
+  :scale: 50%
+
+If running in your own environment, make the shell script commands executable.
+
+.. code-block:: bash
+
+   chmod +x ~/.local/bin/*
+
 Familiarize yourself with the lab environment before you get started.
 
 The lab environment consists of a single-node K8s cluster (`microk8s <https://microk8s.io/>`_) running (`NGINX Plus with App Protect <https://www.nginx.com/products/nginx-app-protect/>`_) as ingress in a daemonset.
@@ -63,7 +87,7 @@ The three commands below would display the same results.
 .. image:: images/05b_get_daemonset_nginx_ingress.jpg
   :scale: 50%
 
-NGINX Plus is running as a daemonset and will listen on port 80 and 443 by default.
+NGINX Plus is running as a daemonset and will listen on TCP ports 80 and 443 by default.
 
 From the web browser try:
 
@@ -73,30 +97,6 @@ From the web browser try:
 
 .. image:: images/06_nginx_404_not_found.jpg
   :scale: 50%
-
-Copy the lab commands into your ``~/.local/bin`` directory.
-
-.. code-block:: bash
-
-   cp -r ./bin/* ~/.local/bin/
-   
-.. image:: images/07_cp_bin.jpg
-  :scale: 50%
-
-Any shell script commands copied to ``~/.local/bin`` wil be made executable and available to invoke from anywhere automatically. Use [Tab] completion to save time.
-
-.. code-block:: bash
-
-   ls -alt ~/.local/bin
-
-.. image:: images/08_ls_bin.jpg
-  :scale: 50%
-
-If running in your own environment, make the shell script commands executable.
-
-.. code-block:: bash
-
-   chmod +x ~/.local/bin/*
 
 Confirm the K8s cluster is healthy. Look for green 'clean'.
 
