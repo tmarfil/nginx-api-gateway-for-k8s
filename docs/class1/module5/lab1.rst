@@ -1,7 +1,7 @@
 Task 04: OpenAPI Spec Enforcement with NGINX App Protect
 ========================================================
 
-Out API has two endpoints:
+Our API has two endpoints:
 
 - ``https://jobs.local/get-job`` is used to GET a random job title.
 - ``https://jobs.local/add-job`` is how we add more jobs titles and will accept an HTTP POST with a list of job titles in JSON format. For example:
