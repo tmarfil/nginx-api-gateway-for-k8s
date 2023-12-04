@@ -29,7 +29,7 @@ Confirm the K8s secret was created.
 
 .. code-block:: bash
 
-   kubectl get secret tls jobs-local-tls -o yaml
+   kubectl get secret jobs-local-tls -o yaml
 
 .. image:: images/03_get_secret.jpg
   :scale: 50%
