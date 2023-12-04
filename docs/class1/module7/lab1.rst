@@ -61,7 +61,7 @@ From microk8s1, create a rate-limit policy. Our rate-limit policy will limit cli
 
    bat rate-limit-policy.yaml
 
-.. image:: images/02_k6_no_rate-limit.jpg
+.. image:: images/03_bat_rate-limit.jpg
   :scale: 50%
 
 .. list-table::
