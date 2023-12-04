@@ -120,7 +120,7 @@ The NGINX Plus images are available in the container registry running on ``http:
 
 .. code-block:: bash
 
-   curl http://localhost:32000/v2_catalog | jq
+   curl http://localhost:32000/v2/_catalog | jq
 
 .. image:: images/11_microk8s_local_container_repo.jpg
   :scale: 50%
