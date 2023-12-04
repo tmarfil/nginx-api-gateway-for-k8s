@@ -22,9 +22,9 @@ Let's first create two NodePort services to test our services from outside the K
    +----------------------------------+----------------------------------+
    | NodePort Service                 | Inside K8s Cluster               |
    +==================================+==================================+
-   | http://jobs.local:30010/get-job  | http://eclectic-jobs:3000/       |
+   | http://jobs.local:30020          | http://eclectic-jobs:3000/       |
    +----------------------------------+----------------------------------+
-   | http://jobs.local:30020          | http://myapp:3000                |
+   | http://jobs.local:30010          | http://myapp:3000                |
    +----------------------------------+----------------------------------+
 
 View the service manifests.
