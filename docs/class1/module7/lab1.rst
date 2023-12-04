@@ -1,7 +1,7 @@
 Task 06: API Request Rate-Limiting
 ==================================
 
-In order to ensure fair use of our API we need to protect against a single user crowding out other users.
+In order to ensure fair use of our API, we need to protect against a single user crowding out other users.
 
 NGINX Plus can rate-limit the API requests of a single user. The rate-limit policy can be keyed to their "Authentication" header.
 
