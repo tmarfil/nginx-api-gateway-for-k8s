@@ -47,7 +47,7 @@ Confirm the NodePort services were created.
 
    k get svc
 
-From the URL bar of the web browser, connect to the `eclectic-jobs` NodePort service: ``http://job.local:30020``.
+From the URL bar of the web browser, connect to the `eclectic-jobs` NodePort service: ``http://jobs.local:30020``.
 Press the [F5] key to make new requests to the `eclectic-jobs` API.
 The `eclectic-jobs` API returns a random job title in JSON format.
 
