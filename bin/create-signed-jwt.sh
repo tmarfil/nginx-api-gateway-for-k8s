@@ -30,7 +30,7 @@ read -r -d '' jwt_payload << EOM
   "iss": "issuer",
   "sub": "subject",
   "aud": "audience",
-  "exp": 1716239022,
+  "exp": 1893456000,
   "nbf": 1664710022,
   "iat": 1664710022,
   "jti": "id123456"
