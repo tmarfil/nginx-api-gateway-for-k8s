@@ -7,7 +7,7 @@ Change to the task_02 directory.
 
    cd ../task_02
 
-Create a TLS certificate and key for the httpS://jobs.local/get-job api endpoint we plan to create.
+Create a TLS certificate and key for the https://jobs.local/get-job api endpoint we plan to create.
 
 .. code-block:: bash
 
