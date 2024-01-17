@@ -43,14 +43,14 @@ From jumphost, edit the HTTP load test script to include your JWT token in every
 
 If you are unfamiliar with the micro text editor:
 
-Ctr + V [Win] or Cmd + V [Mac] to Paste
-Ctr + S [Win] or Cmd + S [Mac] to Save
-Ctr + Q [Win] or Cmd + Q [Mac] to Quit/Exit
+- Ctrl + V [Win] or Cmd + V [Mac] to Paste
+- Ctrl + S [Win] or Cmd + S [Mac] to Save
+- Ctrl + Q [Win] or Cmd + Q [Mac] to Quit/Exit
 
 .. image:: images/01_k6_jwt.jpg
   :scale: 50%
 
-From jumphost, run the performance test.
+From jumphost, run the http request load test.
 
 .. code-block:: bash
 
