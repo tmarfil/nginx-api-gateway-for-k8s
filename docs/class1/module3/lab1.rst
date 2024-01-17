@@ -41,6 +41,12 @@ All Kubernetes admins are familiar with native K8s resources such as 'pods', 'de
    bat VirtualServer.yaml
    k apply -f VirtualServer.yaml
 
+Confirm the status of the virtualserver 'my-virtualserver' you just created.
+
+.. code-block:: bash
+
+   kubectl describe virtualserver my-virtualserver
+
 Our environment now looks like this:
 
 .. table::
