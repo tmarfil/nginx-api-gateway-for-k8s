@@ -24,6 +24,18 @@ NO_COLOR='\033[0m' # No color
 # iat: Issued At - Identifies the time at which the JWT was issued
 # jti: JWT ID - Provides a unique identifier for the JWT
 
+# To make the JWT below a valid OIDC ID token, add the following claims to the payload:
+# 
+# 1. "auth_time": <timestamp>          # The time the end-user was authenticated
+# 2. "nonce": "<unique-string>"        # A unique value to prevent replay attacks
+# 3. "name": "<user-full-name>"        # Optional profile claim for the user's full name
+# 4. "email": "<user-email-address>"   # Optional profile claim for the user's email
+# 5. "given_name": "<user-first-name>" # Optional profile claim for the user's first name
+# 6. "family_name": "<user-last-name>" # Optional profile claim for the user's last name
+# 
+# Note: The "iss", "sub", "aud", "exp", and "iat" claims are already required for OIDC.
+# Ensure the JWT is signed and that the "nonce" is included in the authentication request.
+
 # JWT payload
 read -r -d '' jwt_payload << EOM
 {
