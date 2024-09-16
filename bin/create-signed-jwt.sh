@@ -42,9 +42,9 @@ read -r -d '' jwt_payload << EOM
   "iss": "issuer",
   "sub": "subject",
   "aud": "audience",
-  "exp": 1893456000,
-  "nbf": 1664710022,
-  "iat": 1664710022,
+  "exp": 1893456000,                    # "exp": January 1, 2030, 00:00:00 UTC (expiration time)
+  "nbf": 1664710022,                    # "nbf": October 2, 2022, 11:27:02 UTC (not before time)
+  "iat": 1664710022,                    # "iat": October 2, 2022, 11:27:02 UTC (issued at time)
   "jti": "id123456"
 }
 EOM
