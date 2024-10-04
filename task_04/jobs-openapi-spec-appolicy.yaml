@@ -10,7 +10,7 @@ spec:
     template:
       name: POLICY_TEMPLATE_NGINX_BASE
     open-api-files:
-      - link: https://raw.githubusercontent.com/tmarfil/appworld-2024-nginx-api-gateway-for-k8s/main/task_04/jobs-openapi-spec.yaml
+      - link: https://raw.githubusercontent.com/tmarfil/nginx-api-gateway-for-k8s/main/task_04/jobs-openapi-spec.yaml
     blocking-settings:
       violations:
         - block: true
