@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get JWT from secret and decode base64
-JWT=$(kubectl get secret license-token -n nginx-ingress -o jsonpath='{.data.license\.jwt}' | base64 -d)
+JWT=$(microk8s kubectl get secret license-token -n nginx-ingress -o jsonpath='{.data.license\.jwt}' | base64 -d)
 
 # Extract and decode the payload (second part of JWT between dots)
 PAYLOAD=$(echo $JWT | cut -d'.' -f2 | base64 -d 2>/dev/null)
